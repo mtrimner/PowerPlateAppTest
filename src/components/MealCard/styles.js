@@ -15,4 +15,8 @@ export default StyleSheet.create({
     backgroundColor: 'rgba(139,168,184,0.2)',
     height: 30,
   },
+  addFoodButtonText: {
+    color: 'rgba(139,168,184,1)',
+    fontSize: 18
+  }
 });

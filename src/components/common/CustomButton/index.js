@@ -12,6 +12,7 @@ const CustomButton = ({
   loading,
   onPress,
   style,
+  textStyle,
   ...props
 }) => {
   const getBackgroundColor = () => {
@@ -41,11 +42,11 @@ const CustomButton = ({
 
         {title && (
           <Text
-            style={{
+            style={[{
               color: disabled ? 'black' : '#FFFFFF',
               paddingLeft: loading ? 5 : 0,
               fontSize: 22,
-            }}>
+            }, textStyle]}>
             {title}
           </Text>
         )}

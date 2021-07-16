@@ -63,7 +63,7 @@ const MealCard = ({children, style}) => {
             paddingVertical: 15,
           }}>
           <CustomButton
-            textStyle={{color: 'rgba(139,168,184,1)', fontSize: 18}}
+            textStyle={styles.addFoodButtonText} 
             style={styles.addFoodButton}
             title="+ Add Food"
           />

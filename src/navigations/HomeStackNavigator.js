@@ -21,7 +21,13 @@ const HomeStackNavigator = () => {
           // headerTintColor: '#FFFFFF',
         }}
       />
-      <HomeStack.Screen name={ADD_MEAL} component={AddMeal} />
+      <HomeStack.Screen name={ADD_MEAL} component={AddMeal} options={{
+          // headerShown: false,
+          headerTransparent: true,
+          headerBackTitleVisible: false,
+          headerTitle: false,
+          headerTintColor: '#FFFFFF',
+        }}/>
       <HomeStack.Screen
         name={FOOD_SEARCH}
         component={FoodSearch}></HomeStack.Screen>

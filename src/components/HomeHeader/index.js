@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Platform, SafeAreaView} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import CircularProgressBar from '../CircularProgressBar';
 import ProgressBar from '../common/ProgressBar';
@@ -16,7 +16,8 @@ const HomeHeader = () => {
     <LinearGradient
       style={styles.wrapper}
       colors={['rgba(60, 146, 215, 0.8)', 'rgba(60, 146, 215, 1)']}>
-      <View>
+        <SafeAreaView>
+      <View style={styles.calendarHeader}>
         <CalendarHeader />
       </View>
       <View style={styles.macroDisplay}>
@@ -59,6 +60,7 @@ const HomeHeader = () => {
           </View>
         </View>
       </View>
+      </SafeAreaView> 
     </LinearGradient>
   );
 };

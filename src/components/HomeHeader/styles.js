@@ -16,6 +16,10 @@ export default StyleSheet.create({
     paddingBottom: 20,
     paddingHorizontal: 10,
   },
+  calendarHeader: {
+ paddingTop: 10,
+    paddingBottom: 20,
+  },
   macroDisplay: {
     flexDirection: 'row',
   },

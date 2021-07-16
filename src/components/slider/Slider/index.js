@@ -13,11 +13,12 @@ import {PanGestureHandler} from 'react-native-gesture-handler';
 import styles from './styles';
 import {clamp} from '../../../utils';
 import AnimatedText from '../AnimatedText';
+import {ReText} from 'react-native-redash';
 
-const Slider = ({numbers, sliderWidth, id}) => {
+const Slider = ({numbers, sliderWidth, id, getValue}) => {
   const SLIDER_WIDTH = sliderWidth;
   const KNOB_WIDTH = 30;
-  const MAX_RANGE = 200;
+  const MAX_RANGE = 500;
 
   const [value, setValue] = useState(0);
   const translateX = useSharedValue(0);
@@ -67,6 +68,7 @@ const Slider = ({numbers, sliderWidth, id}) => {
     const sliderRange = SLIDER_WIDTH - KNOB_WIDTH;
     const oneStepValue = sliderRange / MAX_RANGE;
     const step = Math.ceil(translateX.value / oneStepValue);
+    getValue(String(step));
     runOnJS(updateQuantity)(step);
     return String(step);
   });
@@ -84,7 +86,8 @@ const Slider = ({numbers, sliderWidth, id}) => {
       <Animated.View
         style={[styles.progress, progressStyle, {borderRadius: KNOB_WIDTH / 2}]}
       />
-      <PanGestureHandler onGestureEvent={onGestureEvent}>
+
+      <PanGestureHandler onGestureEvent={onGestureEvent} activeOffsetX={[0, 0]}>
         <Animated.View
           style={[
             styles.knob,
@@ -95,7 +98,8 @@ const Slider = ({numbers, sliderWidth, id}) => {
               borderRadius: KNOB_WIDTH / 2,
             },
           ]}>
-          <AnimatedText text={stepText} />
+          {/* <ReText text={stepText} style={{fontSize: 18}}/> */}
+          {/* <AnimatedText text={stepText} /> */}
         </Animated.View>
       </PanGestureHandler>
     </View>

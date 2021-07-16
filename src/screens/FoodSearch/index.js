@@ -27,11 +27,14 @@ const FoodSearch = () => {
   }, [debouncedText]);
 
   const searchFoods = async () => {
-    const response = await nutritionix.get(
-      `/search/instant?query=${debouncedText}&detailed=true`,
-    );
-
-    setFoods(response.data);
+    try {
+      const response = await nutritionix.get(
+        `/search/instant?query=${debouncedText}&detailed=true`,
+      );
+      setFoods(response.data);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   return (
@@ -42,6 +45,7 @@ const FoodSearch = () => {
           borderRadius: 30,
           backgroundColor: '#ffffff',
           marginHorizontal: 40,
+          height: 30,
         }}
         onChangeText={value => setText(value)}
         value={text}

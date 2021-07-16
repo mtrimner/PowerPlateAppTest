@@ -31,11 +31,11 @@ const CalendarHeader = () => {
   };
 
   return (
-    <View style={styles.container} overFlow="hidden">
+    <View style={styles.container} >
       <Pressable
         onPress={() => changeDay(-1)}
-        hitSlop={{top: 20, bottom: 20, left: 20, right: 20}}
-        overflow="hidden">
+        hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
+        >
         <MaterialIcons name="keyboard-arrow-left" color="white" size={26} />
       </Pressable>
 
@@ -47,7 +47,7 @@ const CalendarHeader = () => {
       </View>
       <Pressable
         onPress={() => changeDay(1)}
-        hitSlop={{top: 20, bottom: 20, left: 20, right: 20}}>
+        hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}>
         <MaterialIcons name="keyboard-arrow-right" color="white" size={26} />
       </Pressable>
     </View>

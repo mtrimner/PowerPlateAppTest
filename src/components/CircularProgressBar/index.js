@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, Dimensions, Text, StyleSheet} from 'react-native';
+import {View, Dimensions, Text, StyleSheet, Platform} from 'react-native';
 import Svg, {Circle} from 'react-native-svg';
 import Animated, {
   useAnimatedProps,
@@ -60,7 +60,7 @@ const CircularProgressBar = () => {
             fontSize: R / 2.5,
             color: 'rgba(256,256,256,0.9)',
             fontFamily: 'Lato-Bold',
-            marginBottom: -12,
+            marginBottom: Platform.OS === 'ios' ? 0 : -12,
           }}
           text={progressText}
         />
