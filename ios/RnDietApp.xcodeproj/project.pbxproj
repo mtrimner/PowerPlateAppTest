@@ -17,7 +17,7 @@
 		6AAC804A58DAEC604AC330FB /* libPods-RnDietApp-RnDietAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA1666EBE4B7E5260FDAFE4 /* libPods-RnDietApp-RnDietAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		EDCCFDA145C5430DBDCEC643 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6224E42FED294736A02FF62D /* Lato-Thin.ttf */; };
-		F726236526A12D5600D09DD7 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = F726236426A12D5600D09DD7 /* GoogleService-Info (1).plist */; };
+		F72624A526A1450A00D09DD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F72624A426A1450A00D09DD7 /* GoogleService-Info.plist */; };
 		F811DC30FD834A6982C5635D /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F99A507DB3B426E97C92326 /* Lato-Black.ttf */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		8F99A507DB3B426E97C92326 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F187142C45B84739836E93B8 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
-		F726236426A12D5600D09DD7 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		F72624A426A1450A00D09DD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +107,7 @@
 		13B07FAE1A68108700A75B9A /* RnDietApp */ = {
 			isa = PBXGroup;
 			children = (
+				F72624A426A1450A00D09DD7 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -137,7 +138,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				F726236426A12D5600D09DD7 /* GoogleService-Info (1).plist */,
 				13B07FAE1A68108700A75B9A /* RnDietApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RnDietAppTests */,
@@ -272,7 +272,7 @@
 				671BB2255A9A40118E984999 /* Lato-Bold.ttf in Resources */,
 				1B0FA0D482E447F7B9C45B18 /* Lato-Regular.ttf in Resources */,
 				EDCCFDA145C5430DBDCEC643 /* Lato-Thin.ttf in Resources */,
-				F726236526A12D5600D09DD7 /* GoogleService-Info (1).plist in Resources */,
+				F72624A526A1450A00D09DD7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
