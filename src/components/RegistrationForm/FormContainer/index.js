@@ -25,7 +25,7 @@ const FormContainer = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [sliderPage, setSliderPage] = useState({currentPage: 1});
   const [errors, setErrors] = useState({});
-
+console.log(formValues)
   const scrollRef = useRef();
   const bodyweightRef = useRef();
 

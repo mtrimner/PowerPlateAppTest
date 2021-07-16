@@ -142,9 +142,9 @@ const Signup = ({onChange, value}) => {
           onChange({name: 'password', value});
         }}
         value={value.password}
-        secureTextEntry={
-          !value.password || value.password.length <= 0 ? false : true
-        }
+        // secureTextEntry={
+        //   !value.password || value.password.length <= 0 ? false : true
+        // }
         //   error={errors.password}
       />
       {errorMessage}
