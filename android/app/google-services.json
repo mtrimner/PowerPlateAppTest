@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "30292399167",
+    "project_id": "bold-61f2b",
+    "storage_bucket": "bold-61f2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30292399167:android:7ef340ee6c0f70d210548a",
+        "android_client_info": {
+          "package_name": "com.rndietapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30292399167-8lk4lmbfp3o5k7hn4p35b1h03pk9dfa9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNT9cH2tUVA5dVQl9UhcSGT54nKYqKh9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30292399167-8lk4lmbfp3o5k7hn4p35b1h03pk9dfa9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "30292399167-qpk6us0oejgnuqdethbgn5v07793t7t6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.reactnative.dietapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

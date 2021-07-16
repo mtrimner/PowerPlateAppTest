@@ -1,0 +1,4 @@
+import {NUTRITIONIX_APP_ID, NUTRITIONIX_APP_KEY} from '@env';
+
+export const APP_ID = NUTRITIONIX_APP_ID;
+export const APP_KEY = NUTRITIONIX_APP_KEY;

@@ -1,0 +1,11 @@
+export const MAIN_TAB_NAVIGATOR = 'MainTabNavigator';
+export const STATS_SCREEN = 'Stats';
+export const LOGIN = 'Login';
+export const REGISTER = 'Register';
+export const HOME_SCREEN = 'Home Screen';
+export const ADD_MEAL = 'AddMeal';
+export const HOME_STACK_NAVIGATOR = 'HomeStackNavigator';
+export const WELCOME = 'Welcome';
+export const FOOD_SEARCH = 'FoodSearch';
+export const PROFILE_STACK_NAVIGATOR = 'ProfileStackNavigator';
+export const PROFILE_SCREEN = 'ProfileScreen';
