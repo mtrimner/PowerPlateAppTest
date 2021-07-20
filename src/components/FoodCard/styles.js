@@ -7,7 +7,8 @@ export default StyleSheet.create({
   },
   inputContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
+    // alignItems: 'center',
+    marginBottom: 10,
   },
   textInput: {
     borderWidth: 4,
@@ -18,5 +19,15 @@ export default StyleSheet.create({
   foodName: {
     marginLeft: 15,
     marginVertical: 10,
+    fontSize: 16,
+  },
+  macroLabel: {
+    fontSize: 14,
+    color: 'rgba(0, 0, 0, 0.8)',
+  },
+  macroAnimatedNumber: {
+    fontFamily: 'Lato-Black',
+    fontSize: 18,
+    alignSelf: 'center',
   },
 });

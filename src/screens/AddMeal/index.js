@@ -12,7 +12,7 @@ const AddMeal = ({route}) => {
   // const [foodName, setFoodName] = useState([]);
   const [cals, setCals] = useState('');
   const foods = useSelector(state => state.createMeal);
-
+  // console.log(foods);
   const {navigate} = useNavigation();
   // const foodResults = route.params;
   // useEffect(() => {
@@ -32,7 +32,16 @@ const AddMeal = ({route}) => {
         data={foods.foods}
         renderItem={({item}) => {
           return (
-            <FoodCard foodName={item.name} amount={item.grams} id={item.key} />
+            <FoodCard
+              item={item}
+              baseCalories={item.baseCalories}
+              baseCarbs={item.baseCarbs}
+              baseFat={item.baseFat}
+              baseProtein={item.baseProtein}
+              foodName={item.name}
+              amount={item.grams}
+              id={item.key}
+            />
           );
         }}
       />

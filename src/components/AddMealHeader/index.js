@@ -13,33 +13,34 @@ const AddMealHeader = () => {
   // const carbTotal = mealTotals
   //   .map(food => food.fat)
   //   .reduce((prev, next) => prev + next);
-  console.log(mealTotals);
+
   return (
     <LinearGradient
-    style={styles.wrapper}
-    colors={['rgba(60, 146, 215, 0.8)', 'rgba(60, 146, 215, 1)']}>
-    <SafeAreaView>
-    <BoldText style={styles.headlineText}>Meal Targets</BoldText>
-    <View style={{flexDirection: 'row'}}>
-    <View>
-          <CircularProgressBar />
-      </View>
-        <View>
-      
-      <View style={styles.macroDetails}>
-        <RegularText style={styles.macroText}>FAT 50/100g</RegularText>
-        <ProgressBar height={7} />
-      </View>
-      <View style={styles.macroDetails}>
-        <RegularText style={styles.macroText}>CARBS 50/100g</RegularText>
-        <ProgressBar height={7} />
-      </View>
-      <View style={styles.macroDetails}>
-        <RegularText style={styles.macroText}>PROTEIN 50/100g</RegularText>
-        <ProgressBar height={7} />
-      </View>
-      </View>
-      </View>
+      style={styles.wrapper}
+      colors={['rgba(60, 146, 215, 0.8)', 'rgba(60, 146, 215, 1)']}>
+      <SafeAreaView>
+        <BoldText style={styles.headlineText}>Meal Targets</BoldText>
+        <View style={{flexDirection: 'row'}}>
+          <View>
+            <CircularProgressBar />
+          </View>
+          <View>
+            <View style={styles.macroDetails}>
+              <RegularText style={styles.macroText}>FAT 50/100g</RegularText>
+              <ProgressBar height={7} />
+            </View>
+            <View style={styles.macroDetails}>
+              <RegularText style={styles.macroText}>CARBS 50/100g</RegularText>
+              <ProgressBar height={7} />
+            </View>
+            <View style={styles.macroDetails}>
+              <RegularText style={styles.macroText}>
+                PROTEIN 50/100g
+              </RegularText>
+              <ProgressBar height={7} />
+            </View>
+          </View>
+        </View>
       </SafeAreaView>
     </LinearGradient>
   );
