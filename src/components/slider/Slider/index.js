@@ -26,13 +26,13 @@ const Slider = ({numbers, sliderWidth, id, getValue}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const timerId = setTimeout(() => {
-      dispatch(updateFoodQuantity({grams: value, id}));
-    }, 100);
+    // const timerId = setTimeout(() => {
+    dispatch(updateFoodQuantity({grams: value, id}));
+    // }, 10);
 
-    return () => {
-      clearTimeout(timerId);
-    };
+    // return () => {
+    //   clearTimeout(timerId);
+    // };
   }, [value]);
 
   const onGestureEvent = useAnimatedGestureHandler({

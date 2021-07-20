@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {View, Dimensions, Text, StyleSheet, Platform} from 'react-native';
-import Svg, {Circle} from 'react-native-svg';
+import Svg, {Circle, Rect} from 'react-native-svg';
 import Animated, {
   useAnimatedProps,
   useDerivedValue,
@@ -13,28 +13,29 @@ import RegularText from '../common/text/RegularText';
 
 const {width, height} = Dimensions.get('window');
 
-const CIRCLE_LENGTH = width * 1.2;
-const R = CIRCLE_LENGTH / (2 * Math.PI);
 const STROKE_WIDTH = 12;
-const halfCircle = R + STROKE_WIDTH;
+// const halfCircle = R + STROKE_WIDTH;
 
-const AnimatedCircle = Animated.createAnimatedComponent(Circle);
-const CircularProgressBar = ({value = 0}) => {
+const AnimatedRectangle = Animated.createAnimatedComponent(Rect);
+const ProgressBar = ({value = 700, barHeight = 7, sliderWidth = 200}) => {
   const progress = useSharedValue(0);
+  console.log('Rendered');
 
+  const BAR_WIDTH = sliderWidth;
+  const BAR_HEIGHT = barHeight;
+  // const sliderWidth = 215;
   useEffect(() => {
-    const progressAmount = value / 2400;
+    const progressAmount = 500 / 2400;
     progress.value = withTiming(progressAmount, {duration: 500});
   }, [value]);
 
   const animatedProps = useAnimatedProps(() => {
     if (progress.value <= 1) {
       return {
-        strokeDashoffset:
-          CIRCLE_LENGTH * parseFloat((1 - progress.value).toFixed(2)),
+        width: BAR_WIDTH * parseFloat(progress.value.toFixed(2)),
       };
     } else {
-      return {strokeDashoffset: 0};
+      return {width: BAR_WIDTH};
     }
   });
 
@@ -45,17 +46,18 @@ const CircularProgressBar = ({value = 0}) => {
   return (
     <View
       style={{
-        width: R * 2,
-        // justifyContent: 'center',
+        width: BAR_WIDTH,
+        height: BAR_HEIGHT,
+        justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <View
+      {/* <View
         style={{
           position: 'absolute',
-          top: CIRCLE_LENGTH / 18,
+          top: BAR_WIDTH / 18,
           alignItems: 'center',
-        }}>
-        <ReText
+        }}> */}
+      {/* <ReText
           style={{
             fontSize: R / 2.5,
             color: 'rgba(256,256,256,0.9)',
@@ -79,32 +81,37 @@ const CircularProgressBar = ({value = 0}) => {
             color: 'rgba(256,256,256,0.9)',
           }}>
           CALORIES
-        </BoldText>
-      </View>
+        </BoldText> */}
+      {/* </View> */}
       <Svg
-        width={R * 2}
-        height={R * 2}
-        viewBox={`0 0 ${halfCircle * 2} ${halfCircle * 2}`}>
-        <Circle
-          cx="50%"
-          cy="50%"
-          r={R}
-          stroke={'rgba(236, 241, 243, 0.3)'}
-          strokeWidth={STROKE_WIDTH}
+        width={BAR_WIDTH}
+        height={BAR_HEIGHT}
+        viewBox={`0 0 ${BAR_WIDTH} ${BAR_HEIGHT}`}>
+        <Rect
+          x="0"
+          y="0"
+          rx="5"
+          // stroke={'rgba(236, 241, 243, 0.3)'}
+          fill={'rgba(236, 241, 243, 0.3)'}
+          width={BAR_WIDTH}
+          height={BAR_HEIGHT}
         />
-        <AnimatedCircle
-          cx="50%"
-          cy="50%"
-          r={R}
-          stroke={'rgba(255, 255, 255, 1)'}
-          strokeWidth={STROKE_WIDTH / 1.5}
-          strokeDasharray={CIRCLE_LENGTH}
+        <AnimatedRectangle
+          x="0"
+          y="0"
+          rx="5"
+          // stroke={'rgba(255, 255, 255, 1)'}
+          fill={'rgba(255, 255, 255, 1)'}
+          // width={BAR_WIDTH}
+          height={BAR_HEIGHT}
+          // strokeWidth={STROKE_WIDTH / 1.5}
+          // strokeDasharray={50}
           animatedProps={animatedProps}
-          strokeLinecap={'round'}
+          strokeLinecap="round"
         />
       </Svg>
     </View>
   );
 };
 
-export default CircularProgressBar;
+export default ProgressBar;

@@ -26,7 +26,7 @@ export default StyleSheet.create({
   },
   macroDetails: {
     marginBottom: 10,
-    marginHorizontal: 50,
+    // marginHorizontal: 50,
   },
   macroText: {
     alignSelf: 'center',

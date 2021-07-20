@@ -36,10 +36,6 @@ const FoodCard = ({
     setSliderWidth(Math.floor(width));
   };
 
-  const onChange = value => {
-    setText(value);
-  };
-
   const carbsConsumed = useDerivedValue(() => {
     const multiplier = grams.value / 5;
     carbs.value = baseCarbs;

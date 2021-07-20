@@ -61,20 +61,28 @@ const createMealSlice = createSlice({
       newState.foods[index] = {
         key: state.foods[index].key,
         name: state.foods[index].name,
-        calories: Math.round(state.foods[index].baseCalories * multiplier),
+        calories: Math.ceil(state.foods[index].baseCalories * multiplier),
         baseCalories: state.foods[index].baseCalories,
-        protein: Math.round(state.foods[index].baseProtein * multiplier),
+        protein: Math.ceil(state.foods[index].baseProtein * multiplier),
         baseProtein: state.foods[index].baseProtein,
-        carbs: Math.round(state.foods[index].baseCarbs * multiplier),
+        carbs: Math.ceil(state.foods[index].baseCarbs * multiplier),
         baseCarbs: state.foods[index].baseCarbs,
-        fat: Math.round(state.foods[index].baseFat * multiplier),
+        fat: Math.ceil(state.foods[index].baseFat * multiplier),
         baseFat: state.foods[index].baseFat,
         grams: action.payload.grams,
       };
-      newState.totalCalories = newState.foods.map(food => food.calories).reduce((prev, next) => prev + next)
-      newState.totalCarbs = newState.foods.map(food => food.carbs).reduce((prev, next) => prev + next)
-      newState.totalProtein = newState.foods.map(food => food.protein).reduce((prev, next) => prev + next)
-      newState.totalFat = newState.foods.map(food => food.fat).reduce((prev, next) => prev + next);
+      newState.totalCalories = newState.foods
+        .map(food => food.calories)
+        .reduce((prev, next) => prev + next);
+      newState.totalCarbs = newState.foods
+        .map(food => food.carbs)
+        .reduce((prev, next) => prev + next);
+      newState.totalProtein = newState.foods
+        .map(food => food.protein)
+        .reduce((prev, next) => prev + next);
+      newState.totalFat = newState.foods
+        .map(food => food.fat)
+        .reduce((prev, next) => prev + next);
       return newState;
     },
   },

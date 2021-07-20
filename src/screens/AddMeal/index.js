@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
-import {Text, View, FlatList} from 'react-native';
+import {Text, View, FlatList, ScrollView} from 'react-native';
 import {useSelector} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
 import AddMealHeader from '../../components/AddMealHeader';
@@ -24,35 +24,55 @@ const AddMeal = ({route}) => {
   const getNumbers = number => {
     setCals(number);
   };
+  console.log(foods.foods);
 
   return (
     <>
       <AddMealHeader />
-      <FlatList
-        data={foods.foods}
-        renderItem={({item}) => {
-          return (
-            <FoodCard
-              item={item}
-              baseCalories={item.baseCalories}
-              baseCarbs={item.baseCarbs}
-              baseFat={item.baseFat}
-              baseProtein={item.baseProtein}
-              foodName={item.name}
-              amount={item.grams}
-              id={item.key}
-            />
-          );
-        }}
-      />
-      <CustomButton
-        title="Add Food"
-        primary
-        style={{marginHorizontal: 60}}
-        onPress={() => {
-          navigate(FOOD_SEARCH);
-        }}
-      />
+      <ScrollView>
+        <View>
+          {foods.foods.map(item => {
+            return (
+              <FoodCard
+                item={item}
+                baseCalories={item.baseCalories}
+                baseCarbs={item.baseCarbs}
+                baseFat={item.baseFat}
+                baseProtein={item.baseProtein}
+                foodName={item.name}
+                amount={item.grams}
+                id={item.key}
+                key={item.key}
+              />
+            );
+          })}
+          {/* <FlatList
+          data={foods.foods}
+          renderItem={({item}) => {
+            return (
+              <FoodCard
+                item={item}
+                baseCalories={item.baseCalories}
+                baseCarbs={item.baseCarbs}
+                baseFat={item.baseFat}
+                baseProtein={item.baseProtein}
+                foodName={item.name}
+                amount={item.grams}
+                id={item.key}
+              />
+            );
+          }}
+        /> */}
+        </View>
+        <CustomButton
+          title="Add Food"
+          primary
+          style={{marginHorizontal: 60}}
+          onPress={() => {
+            navigate(FOOD_SEARCH);
+          }}
+        />
+      </ScrollView>
     </>
   );
 };
