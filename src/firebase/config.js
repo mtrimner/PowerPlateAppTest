@@ -1,7 +1,8 @@
 // import {Platform} from 'react-native';
+import {FIREBASE_KEY} from '@env';
 
 // const iosCredentials = {
-//   apiKey: 'AIzaSyA4-dLwwDerOYRCfO9m-AaIm2p4BXnuH-c',
+//   apiKey: 'FIREBASE_KEY',
 //   authDomain: 'bold-61f2b.firebaseapp.com',
 //   // databaseURL: 'https://your-database-name.firebaseio.com',
 //   projectId: 'bold-61f2b',
@@ -11,7 +12,7 @@
 // };
 
 // const androidCredentials = {
-//   apiKey: 'AIzaSyA4-dLwwDerOYRCfO9m-AaIm2p4BXnuH-c',
+//   apiKey: 'FIREBASE_KEY',
 //   authDomain: 'bold-61f2b.firebaseapp.com',
 //   // databaseURL: 'https://your-database-name.firebaseio.com',
 //   projectId: 'bold-61f2b',
